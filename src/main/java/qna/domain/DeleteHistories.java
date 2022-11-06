@@ -1,12 +1,12 @@
 package qna.domain;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class DeleteHistories {
-
 	private final List<DeleteHistory> deleteHistoryList;
 
 	private DeleteHistories(List<DeleteHistory> deleteHistoryList) {
@@ -21,7 +21,7 @@ public class DeleteHistories {
 	}
 
 	public List<DeleteHistory> getDeleteHistories() {
-		return deleteHistoryList;
+		return Collections.unmodifiableList(deleteHistoryList);
 	}
 
 	@Override
